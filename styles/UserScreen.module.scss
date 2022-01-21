@@ -1,0 +1,8 @@
+@import "./vars";
+
+.container {
+  @include disFlex(column);
+  justify-content: unset;
+  padding: 3em 0;
+  height: 100vh;
+}

@@ -1,0 +1,59 @@
+@import "./vars";
+
+@keyframes dropIn {
+  from {
+    transform: translateX(-600px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.container {
+  @include disFlex(row);
+  margin: 1.25rem 1em;
+  background: white;
+  border: 1px solid lightcoral;
+  border-radius: 3px;
+  animation: dropIn 1s ease forwards;
+  animation-delay: calc(var(--order) * 100ms);
+
+  li {
+    flex: 1;
+    margin: 0.25em 0.5em;
+    font-size: 1.5em;
+  }
+
+  button {
+    padding: 1em;
+    margin: 0.5em;
+
+    svg {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.deleteButton {
+  background-color: rgba($color: red, $alpha: 0.25);
+}
+
+.finishedButton {
+  background-color: rgba($color: lightgreen, $alpha: 0.5);
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    li {
+      font-size: 1.1em;
+    }
+
+    button {
+      padding: 0.5em;
+
+      svg {
+        font-size: 2em;
+      }
+    }
+  }
+}

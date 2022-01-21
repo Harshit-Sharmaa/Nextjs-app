@@ -1,0 +1,11 @@
+$gradientStart: #000000;
+$gradientEnd: #fda085;
+$buttonColor1: #d1c59d;
+$buttonColor2: #849233;
+
+@mixin disFlex($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}

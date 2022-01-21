@@ -1,0 +1,11 @@
+@import "./vars";
+
+.container {
+  @include disFlex(column);
+  margin-top: 1em;
+
+  ul {
+    min-width: 30%;
+    list-style: none;
+  }
+}

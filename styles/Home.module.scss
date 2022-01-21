@@ -1,0 +1,32 @@
+@import "./vars";
+
+.container {
+  @include disFlex(column);
+  justify-content: unset;
+  padding: 5em;
+  height: 100vh;
+}
+
+.buttonGroup {
+  @include disFlex(column);
+  margin: 5em 0;
+
+  button {
+    @include disFlex(row);
+    margin: 1em 0;
+    font-size: 1em;
+
+    &:nth-child(1) {
+      background-color: white;
+    }
+
+    &:nth-child(2) {
+      background-color: $buttonColor1;
+    }
+
+    svg {
+      margin-right: 1em;
+      font-size: 1.75em;
+    }
+  }
+}
